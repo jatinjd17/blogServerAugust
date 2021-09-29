@@ -116,7 +116,7 @@ exports.read = async (req, res) => {
     .populate("tags", "_id name slug")
     .populate("postedBy", "_id name username")
     .select(
-      "_id title body slug mtitle mdesc categories tags postedBy createdAt updatedAt"
+      "_id title body slug excerpt mtitle mdesc categories tags postedBy createdAt updatedAt"
     );
 
   if (!isBlog) {
