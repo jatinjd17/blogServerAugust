@@ -54,7 +54,7 @@ exports.createblog = async (req, res) => {
     createBlog.body = body;
     createBlog.excerpt = smartTrim(body, 320, " ", " ...");
     createBlog.slug = slugify(title).toLowerCase();
-    createBlog.mtitle = smartTrim(title, 20, " ", " ...");
+    createBlog.mtitle = smartTrim(title, 80, " ", " ...");
     //   mdecs: stripHtml(body.substring(0, 160)),
     createBlog.mdecs = smartTrim(body, 320, " ", " ...");
     createBlog.categories = arrayOfCategories;
